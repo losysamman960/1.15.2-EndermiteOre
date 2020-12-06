@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "em:enderite_ore_block"
+  },
+  "result": "em:enderite_scrap",
+  "experience": 2.0,
+  "cookingtime": 200
+}

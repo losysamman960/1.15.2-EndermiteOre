@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "em:enderite_block"
+  },
+  "result": "em:enderite_glass",
+  "experience": 1.0,
+  "cookingtime": 200
+}

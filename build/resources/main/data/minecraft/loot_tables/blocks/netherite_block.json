@@ -1,0 +1,14 @@
+{
+  "type": "em:netherite_block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "em:netherite_block"
+        }
+      ]
+    }
+  ]
+}

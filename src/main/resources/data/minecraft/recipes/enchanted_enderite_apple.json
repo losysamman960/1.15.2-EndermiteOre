@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "eee",
+    "ege",
+    "eee"
+  ],
+  "key":
+  {
+    "e":
+    {
+      "item": "em:enderite_block"
+    },
+    "g":
+    {
+      "item": "minecraft:golden_apple"
+    }
+  },
+  "result":
+  {
+    "item": "em:enchanted_enderite_apple",
+    "count": 1
+  }
+}

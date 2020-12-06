@@ -1,0 +1,108 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 10/8/20 3:39 PM
+Description: Ticking entity
+
+java.lang.ArrayIndexOutOfBoundsException: 3
+	at java.util.Arrays$ArrayList.get(Arrays.java:3841) ~[?:1.8.0_261] {}
+	at net.minecraft.util.NonNullList.get(NonNullList.java:45) ~[?:?] {re:classloading}
+	at net.minecraft.tileentity.LockableLootTileEntity.getStackInSlot(LockableLootTileEntity.java:90) ~[?:?] {re:classloading}
+	at net.minecraft.inventory.container.Slot.getStack(Slot.java:69) ~[?:?] {re:classloading}
+	at net.minecraft.inventory.container.Container.detectAndSendChanges(Container.java:128) ~[?:?] {re:classloading}
+	at net.minecraft.entity.player.ServerPlayerEntity.tick(ServerPlayerEntity.java:335) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.updateEntity(ServerWorld.java:615) ~[?:?] {re:classloading}
+	at net.minecraft.world.World.guardEntityTick(World.java:586) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:404) ~[?:?] {re:classloading}
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:886) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:821) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:120) ~[?:?] {re:classloading,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:662) [?:?] {re:classloading,pl:accesstransformer:B}
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_261] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at java.util.Arrays$ArrayList.get(Arrays.java:3841)
+	at net.minecraft.util.NonNullList.get(NonNullList.java:45)
+	at net.minecraft.tileentity.LockableLootTileEntity.getStackInSlot(LockableLootTileEntity.java:90)
+	at net.minecraft.inventory.container.Slot.getStack(Slot.java:69)
+	at net.minecraft.inventory.container.Container.detectAndSendChanges(Container.java:128)
+	at net.minecraft.entity.player.ServerPlayerEntity.tick(ServerPlayerEntity.java:335)
+	at net.minecraft.world.server.ServerWorld.updateEntity(ServerWorld.java:615)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:player (net.minecraft.entity.player.ServerPlayerEntity)
+	Entity ID: 192
+	Entity Name: Dev
+	Entity's Exact location: 195.87, 63.00, 153.55
+	Entity's Block location: World: (195,63,153), Chunk: (at 3,3,9 in 12,9; contains blocks 192,0,144 to 207,255,159), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Entity's Momentum: 0.00, -0.08, 0.00
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.guardEntityTick(World.java:586)
+	at net.minecraft.world.server.ServerWorld.tick(ServerWorld.java:404)
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayerEntity['Dev'/192, l='New World', x=195.87, y=63.00, z=153.55]]
+	Chunk stats: ServerChunkCache: 2048
+	Level dimension: DimensionType{minecraft:overworld}
+	Level name: New World
+	Level seed: 214198321198745527
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: {}
+	Level spawn location: World: (192,63,153), Chunk: (at 0,3,9 in 12,9; contains blocks 192,0,144 to 207,255,159), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 881 game time, 881 day time
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 90583 (now: false), thunder time: 110357 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:886)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:821)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:120)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:662)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.15.2
+	Minecraft Version ID: 1.15.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_261, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 251552640 bytes (239 MB) / 651165696 bytes (621 MB) up to 928514048 bytes (885 MB)
+	CPUs: 4
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 5.1.2+70+master.2845bb9
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/eventbus-2.2.0-service.jar eventbus PLUGINSERVICE 
+		/forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.1.1-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 31.2
+	Forge: net.minecraftforge:31.2.0
+	FML Language Providers: 
+		javafml@31.2
+		minecraft@1
+	Mod List: 
+		client-extra.jar Minecraft {minecraft@1.15.2 DONE}
+		forge-1.15.2-31.2.0_mapped_snapshot_20200514-1.15.1-recomp.jar Forge {forge@31.2.0 DONE}
+		main Endermite Mod {em@1.15.2-1.0.0 DONE}
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/192, l='New World', x=195.87, y=63.00, z=153.55]]
+	Data Packs: vanilla, mod:forge (incompatible), mod:em
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

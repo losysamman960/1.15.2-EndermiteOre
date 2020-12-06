@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "netherite_ingot",
+  "ingredients": [
+    {
+      "item": "em:netherite_ingot"
+    },
+    {
+      "item": "minecraft:diamond_chestplate"
+    }
+  ],
+  "result": {
+    "item": "em:netherite_chestplate"
+  }
+}

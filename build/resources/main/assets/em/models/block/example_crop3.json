@@ -1,0 +1,6 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "em:blocks/example_crop_stage3"
+  }
+}

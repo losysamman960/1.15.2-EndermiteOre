@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "sss",
+    "xpx",
+    "eee"
+  ],
+  "key":
+  {
+    "p":
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    "e":
+    {
+      "item": "em:netherite_ingot"
+    },
+    "s":
+    {
+      "item": "em:enderite_scrap"
+    },
+    "x":
+    {
+      "item": "minecraft:air"
+    }
+  },
+  "result":
+  {
+    "item": "em:enderite_workbench",
+    "count": 1
+  }
+}

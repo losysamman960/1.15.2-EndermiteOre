@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: EndermiteOre
+Implementation-Version: 1.0
+Specification-Vendor: examplemodsareus
+Specification-Title: examplemod
+Implementation-Timestamp: 2020-12-03T17:13:55+0300
+Specification-Version: 1
+Implementation-Vendor: examplemodsareus
+

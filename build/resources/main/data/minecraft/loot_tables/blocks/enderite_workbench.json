@@ -1,0 +1,14 @@
+{
+  "type": "em:enderite_workbench",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "em:enderite_workbench"
+        }
+      ]
+    }
+  ]
+}

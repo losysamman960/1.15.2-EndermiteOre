@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "eee",
+    "xbx",
+    "xxx"
+  ],
+  "key":
+  {
+    "e":
+    {
+      "item": "em:enderite_ingot"
+    },
+    "b":
+    {
+      "item": "minecraft:barrel"
+    },
+    "x":
+    {
+      "item": "em:enderite_nugget"
+    }
+  },
+  "result":
+  {
+    "item": "em:enderite_barrel",
+    "count": 1
+  }
+}

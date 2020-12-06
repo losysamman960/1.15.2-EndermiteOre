@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "em:enderite_ingot"
+    },
+    {
+      "item": "em:enderite_ingot"
+    },
+    {
+      "item": "em:enderite_ingot"
+    },
+    {
+      "item": "em:enderite_ingot"
+    }
+  ],
+  "result":
+  {
+    "item": "em:enderite_coal",
+    "count": 1
+  }
+}
