@@ -1,10 +1,7 @@
 package com.lostlosy.endermite.init;
 
 import com.lostlosy.endermite.EndermiteMod;
-import com.lostlosy.endermite.items.EnchantedEnderiteApple;
-import com.lostlosy.endermite.items.EnderiteCoal;
-import com.lostlosy.endermite.items.ItemBase;
-import com.lostlosy.endermite.items.ModMusicDiscItem;
+import com.lostlosy.endermite.items.*;
 import com.lostlosy.endermite.util.enums.ModArmorMaterial;
 import com.lostlosy.endermite.util.enums.ModItemTier;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -37,6 +34,9 @@ public class ModItems {
                     new Item.Properties().group(EndermiteMod.TAB).maxStackSize(1).rarity(Rarity.RARE)));
 
     //Tools
+    public static final RegistryObject<BowItem> ENDERITE_BOW = ITEMS.register("enderite_bow",
+            () -> new BowItem(new Item.Properties().maxStackSize(2).group(EndermiteMod.TAB).maxDamage(10)));
+
     public static final RegistryObject<SwordItem> ENDERITE_SWORD = ITEMS.register("enderite_sword",
             () -> new SwordItem(ModItemTier.ENDERITE_INGOT, 1, -3.0F, new Item.Properties().group(EndermiteMod.TAB)));
 
