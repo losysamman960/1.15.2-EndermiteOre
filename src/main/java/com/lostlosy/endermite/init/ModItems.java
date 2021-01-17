@@ -35,7 +35,7 @@ public class ModItems {
 
     //Tools
     public static final RegistryObject<BowItem> ENDERITE_BOW = ITEMS.register("enderite_bow",
-            () -> new BowItem(new Item.Properties().maxStackSize(2).group(EndermiteMod.TAB).maxDamage(10)));
+            () -> new BowItem(new Item.Properties().maxStackSize(2).group(EndermiteMod.TAB).maxDamage(30)));
 
     public static final RegistryObject<SwordItem> ENDERITE_SWORD = ITEMS.register("enderite_sword",
             () -> new SwordItem(ModItemTier.ENDERITE_INGOT, 1, -3.0F, new Item.Properties().group(EndermiteMod.TAB)));

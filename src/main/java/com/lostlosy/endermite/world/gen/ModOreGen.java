@@ -26,9 +26,11 @@ public class ModOreGen {
     @SubscribeEvent
     public static void generateOre(FMLLoadCompleteEvent event) {
         for (Biome biome : ForgeRegistries.BIOMES) {
+            //Adds Enderite Ore Block
             if (biome.getCategory() == Biome.Category.THEEND) ;
 genOre(biome, 5, 35, 5, 43, END_STONE, ModBlocks.ENDERITE_ORE_BLOCK.get().getDefaultState(),3);
 
+            //Adds Ancient Debris
             if (biome.getCategory() == Biome.Category.NETHER);
 genOre(biome, 5, 11, 5, 19,OreFeatureConfig.FillerBlockType.NETHERRACK,
         ModBlocks.ANCIENT_DEBRIS.get().getDefaultState(), 3);

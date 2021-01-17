@@ -27,20 +27,21 @@ public class EndermiteMod {
     public static final ResourceLocation EXAMPLE_DIM_TYPE = new ResourceLocation(MOD_ID, "example");
 
     public EndermiteMod() {
+        //Registers to modEventBus
         MinecraftForge.EVENT_BUS.register(this);
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-
-        //ModParticles.PARTICLE_TYPES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModSounds.SOUNDS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        //ModPotions.POTIONS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        //ModPotions.POTIONS_EFFECTS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModEnchantment.ENCHANTMENTS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModItems.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModFluid.FLUIDS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModBlocks.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        //Registry
+        //ModParticles.PARTICLE_TYPES.register(modEventBus);
+        ModSounds.SOUNDS.register(modEventBus);
+        //ModPotions.POTIONS.register(modEventBus);
+        //ModPotions.POTIONS_EFFECTS.register(modEventBus);
+        ModEnchantment.ENCHANTMENTS.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
+        ModFluid.FLUIDS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
         ModTileEntityTypes.TILE_ENTITY_TYPES.register(modEventBus);
         ModContainerTypes.CONTAINER_TYPES.register(modEventBus);
         ModBiomes.BIOMES.register(modEventBus);

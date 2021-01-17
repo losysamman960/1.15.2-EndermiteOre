@@ -9,6 +9,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class DimensionInit {
 
+    //Registers Modded Dimension
     public static final DeferredRegister<ModDimension> MOD_DIMENSIONS = new DeferredRegister<>(ForgeRegistries.MOD_DIMENSIONS, EndermiteMod.MOD_ID);
 
     public static final RegistryObject<ModDimension> EXAMPLE_DIM = MOD_DIMENSIONS.register("example_dim", () -> new ExampleModDimension());

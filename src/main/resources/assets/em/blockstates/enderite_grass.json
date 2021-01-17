@@ -1,11 +1,6 @@
 {
-    "variants": {
-        "snowy=false": [
-            { "model": "block/enderite_grass" },
-            { "model": "block/enderite_grass", "y": 90 },
-            { "model": "block/enderite_grass","y": 180 },
-            { "model": "block/enderite_grass", "y": 270 }
-        ],
-        "snowy=true":  { "model": "block/enderite_grass" }
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "em:blocks/enderite_grass"
     }
 }

@@ -26,7 +26,7 @@ public class ModBiomes {
             .category(Biome.Category.PLAINS)
             .downfall(0.5f)
             .depth(0.12f)
-            //This does not parent with any biome not like how bambo parents of the jungle
+            //This does not parent with any biome unlike how bambo parents of the jungle
             .parent(null)));
 
     public static void registerBiomes() {

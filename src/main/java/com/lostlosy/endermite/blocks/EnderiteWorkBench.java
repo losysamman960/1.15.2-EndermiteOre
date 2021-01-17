@@ -124,7 +124,7 @@ public class EnderiteWorkBench extends Block {
     }
 
     @Override
-    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+    protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder)     {
         builder.add(FACING);
     }
 }

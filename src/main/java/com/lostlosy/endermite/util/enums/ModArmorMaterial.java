@@ -21,7 +21,7 @@ public enum ModArmorMaterial implements IArmorMaterial {
     NETHERITE_INGOT(EndermiteMod.MOD_ID + ":netherite_ingot", 37, new int[] { 6, 5, 7, 2 }, 15,
             SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 1.0F, () -> { return Ingredient.fromItems(ModItems.NETHERITE_INGOT.get());
     });
-
+//something
     private static final int[] MAX_DAMAGE_ARRAY = new int[] { 11, 15, 16, 13 };
     private final String name;
     private final int maxDamageFactor;
