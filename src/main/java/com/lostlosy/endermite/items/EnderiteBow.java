@@ -32,7 +32,8 @@ public class EnderiteBow extends ShootableItem {
      * Called when the player stops using an Item (stops holding the right mouse button).
      */
     public void onPlayerStoppedUsing(ItemStack stack, World worldIn, LivingEntity entityLiving, int timeLeft) {
-        if (entityLiving instanceof PlayerEntity) {
+        if (entityLiving instanceof PlayerEntity)
+        {
             PlayerEntity playerentity = (PlayerEntity)entityLiving;
             boolean flag = playerentity.abilities.isCreativeMode || EnchantmentHelper.getEnchantmentLevel(Enchantments.INFINITY, stack) > 0;
             ItemStack itemstack = playerentity.findAmmo(stack);
@@ -47,9 +48,11 @@ public class EnderiteBow extends ShootableItem {
                 }
 
                 float f = getArrowVelocity(i);
-                if (!((double)f < 0.1D)) {
+                if (!((double)f < 0.1D))
+                {
                     boolean flag1 = playerentity.abilities.isCreativeMode || (itemstack.getItem() instanceof ArrowItem && ((ArrowItem)itemstack.getItem()).isInfinite(itemstack, stack, playerentity));
-                    if (!worldIn.isRemote) {
+                    if (!worldIn.isRemote)
+                    {
                         ArrowItem arrowitem = (ArrowItem)(itemstack.getItem() instanceof ArrowItem ? itemstack.getItem() : Items.ARROW);
                         AbstractArrowEntity abstractarrowentity = arrowitem.createArrow(worldIn, itemstack, playerentity);
                         abstractarrowentity = customeArrow(abstractarrowentity);
