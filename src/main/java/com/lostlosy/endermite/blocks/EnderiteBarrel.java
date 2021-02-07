@@ -52,7 +52,7 @@ public class EnderiteBarrel extends Block {
                     return ActionResultType.SUCCESS;
                 }
             }
-            return ActionResultType.FAIL;
+            return ActionResultType.SUCCESS;
         }
 
         @Override

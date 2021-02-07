@@ -33,6 +33,8 @@ public class ModItems {
             () -> new ModMusicDiscItem(5, ModSounds.LAZY_PROMISES_MUSIC.get(),
                     new Item.Properties().group(EndermiteMod.TAB).maxStackSize(1).rarity(Rarity.RARE)));
 
+    public static final RegistryObject<Item> TEST_ITEM = ITEMS.register("test_item", ItemBase::new);
+
     //Tools
     public static final RegistryObject<EnderiteBow> ENDERITE_BOW = ITEMS.register("enderite_bow",
             () -> new EnderiteBow(new Item.Properties().maxStackSize(2).group(EndermiteMod.TAB).maxDamage(30)));
